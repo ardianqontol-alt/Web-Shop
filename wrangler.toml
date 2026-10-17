@@ -10,4 +10,4 @@ ADMIN_USERNAME = "yanzadmin"
 [[d1_databases]]
 binding = "DB"
 database_name = "yanz-shop-db"
-database_id = "ISI_DATABASE_ID_DARI_WRANGLER_D1_CREATE"
+database_id = "bebae032-cc85-4730-b590-dea945016937"
