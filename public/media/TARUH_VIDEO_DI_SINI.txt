@@ -1,0 +1,7 @@
+Taruh 2 file video di folder ini (nama harus persis):
+
+  intro.mp4     -> tampil di kotak 16:9 tengah atas halaman Beranda (autoplay, loop, tanpa suara)
+  tutorial.mp4  -> tampil di popup "Tutorial Login ke FF"
+
+Catatan: Cloudflare Pages membatasi ukuran 1 file maksimal 25 MiB.
+Kompres video jika lebih besar (contoh: ffmpeg -i in.mp4 -vf scale=1280:-2 -crf 28 -an intro.mp4).
