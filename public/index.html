@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Yanz Shop — Akun FF ID Cantik</title>
+<meta name="description" content="Yanz Shop — jual akun Free Fire ID cantik tingkat Mythic, Legendary, Epic, Rare, dan Unik. Cepat, otomatis, dan terpercaya.">
+<meta name="theme-color" content="#07070d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+<div class="bg"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+
+<header id="top">
+  <div class="bar">
+    <a class="logo" href="#/home"><span class="logo-mark">Y</span><span><b>Yanz</b> Shop</span></a>
+    <nav id="nav">
+      <a data-nav="home" href="#/home"><i>🏠</i><span>Beranda</span></a>
+      <a data-nav="shop" href="#/shop"><i>🛒</i><span>Katalog</span></a>
+      <a data-nav="history" href="#/history"><i>🧾</i><span>Riwayat</span></a>
+      <a data-nav="deposit" href="#/deposit"><i>💰</i><span>Deposit</span></a>
+      <a data-nav="contact" href="#/contact"><i>💬</i><span>Kontak</span></a>
+      <a data-nav="profile" href="#/profile"><i>👤</i><span>Profil</span></a>
+      <a data-nav="admin" href="#/admin" id="navAdmin" hidden><i>🛠️</i><span>Admin</span></a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="bellBtn" aria-label="Notifikasi">🔔<em id="bellBadge" hidden>0</em></button>
+      <a class="chip bal" id="balChip" href="#/deposit" hidden>💰 <b id="balVal">Rp 0</b></a>
+      <button class="btn sm" id="loginBtn">Masuk</button>
+      <button class="btn sm primary" id="regBtn">Daftar</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- BERANDA -->
+  <section class="page" id="p-home">
+    <div class="wrap">
+      <div class="hero-video reveal" id="heroVideo" title="Ketuk untuk nyalakan/matikan suara">
+        <video id="introVideo" src="media/intro.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <div class="hv-fallback"><div class="big-ico">🎬</div><p>Taruh video kamu di <code>public/media/intro.mp4</code></p></div>
+        <span class="hv-badge">● LIVE</span>
+      </div>
+
+      <div class="hero-text reveal">
+        <h1>Akun Free Fire <span class="grad">ID Cantik</span><br>Langsung Jadi Milikmu</h1>
+        <p>Pilih ID Mythic, Legendary, Epic, Rare atau Unik. Bayar pakai saldo, file akun langsung bisa diunduh.</p>
+        <form class="search big" id="homeSearch">
+          <input id="homeQ" placeholder="Cari ID cantik… contoh: 7777, 123456" inputmode="search" autocomplete="off">
+          <button class="btn primary">🔍 Cari ID</button>
+        </form>
+        <div class="stats" id="homeStats"></div>
+      </div>
+
+      <h2 class="sec reveal">Pilih Tingkatan ID</h2>
+      <div class="tier-grid" id="tierGrid"></div>
+
+      <h2 class="sec reveal">Kenapa Yanz Shop?</h2>
+      <div class="feat-grid">
+        <div class="feat reveal"><span>⚡</span><h4>Proses Otomatis</h4><p>Bayar pakai saldo, akun langsung bisa diunduh tanpa menunggu admin.</p></div>
+        <div class="feat reveal"><span>🔒</span><h4>Aman &amp; Rapi</h4><p>Setiap pembelian tercatat di riwayat dan file akun bisa diunduh kapan saja.</p></div>
+        <div class="feat reveal"><span>🎁</span><h4>Voucher Diskon</h4><p>Punya kode voucher? Masukkan saat membeli untuk potongan harga.</p></div>
+        <div class="feat reveal"><span>💬</span><h4>Admin Responsif</h4><p>Ada kendala? Hubungi admin langsung lewat Telegram.</p></div>
+      </div>
+
+      <h2 class="sec reveal">ID Terbaru</h2>
+      <div class="grid" id="homeLatest"></div>
+    </div>
+  </section>
+
+  <!-- KATALOG -->
+  <section class="page" id="p-shop">
+    <div class="wrap">
+      <h1 class="ptitle reveal">Katalog ID</h1>
+      <div class="filters reveal">
+        <div class="chips" id="tierChips"></div>
+        <div class="row">
+          <form class="search" id="shopSearch"><input id="shopQ" placeholder="Cari ID…" autocomplete="off" inputmode="search"><button class="btn">Cari</button></form>
+          <select id="shopSort"><option value="low">Termurah</option><option value="high">Termahal</option><option value="new">Terbaru</option></select>
+        </div>
+      </div>
+      <div class="grid" id="shopGrid"></div>
+    </div>
+  </section>
+
+  <section class="page" id="p-history"><div class="wrap" id="v-history"></div></section>
+  <section class="page" id="p-deposit"><div class="wrap" id="v-deposit"></div></section>
+  <section class="page" id="p-contact"><div class="wrap" id="v-contact"></div></section>
+  <section class="page" id="p-profile"><div class="wrap" id="v-profile"></div></section>
+  <section class="page" id="p-admin"><div class="wrap" id="v-admin"></div></section>
+</main>
+
+<footer class="foot"><div class="wrap">© <span id="yr"></span> Yanz Shop · Admin: <a href="https://t.me/yanzstoru" target="_blank" rel="noopener">t.me/yanzstoru</a></div></footer>
+
+<!-- MODAL: LOGIN / DAFTAR -->
+<div class="modal" id="m-auth">
+  <div class="mbox">
+    <button class="mx" data-close aria-label="Tutup">✕</button>
+    <div class="tabs2"><button type="button" data-tab="login" class="on">Masuk</button><button type="button" data-tab="register">Daftar</button></div>
+    <form id="authForm" autocomplete="on">
+      <label>Username<input name="username" required minlength="3" maxlength="20" autocomplete="username" placeholder="contoh: yanz_ff"></label>
+      <label id="phoneRow" hidden>No. WhatsApp/Telegram (opsional)<input name="phone" inputmode="tel" placeholder="08xxxxxxxxxx"></label>
+      <label>Password<input name="password" type="password" required minlength="6" autocomplete="current-password" placeholder="minimal 6 karakter"></label>
+      <p class="err" id="authErr"></p>
+      <button class="btn primary block" id="authSubmit">Masuk</button>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: KONFIRMASI BELI -->
+<div class="modal" id="m-confirm"><div class="mbox" id="confirmBox"></div></div>
+
+<!-- MODAL: SUKSES -->
+<div class="modal" id="m-success"><div class="mbox center" id="successBox"></div></div>
+
+<!-- MODAL: TUTORIAL VIDEO -->
+<div class="modal z2" id="m-tutorial">
+  <div class="mbox wide" id="tutBox">
+    <h3>📺 Tutorial Login ke Free Fire</h3>
+    <div class="vid">
+      <video id="tutVideo" controls playsinline preload="none"></video>
+      <div class="hv-fallback"><div class="big-ico">🎬</div><p>Taruh video tutorial di <code>public/media/tutorial.mp4</code></p></div>
+    </div>
+    <button class="btn block" id="tutClose">Close</button>
+  </div>
+</div>
+
+<!-- NOTIFIKASI -->
+<div class="drawer-bg" id="drawerBg"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="dh"><h3>🔔 Notifikasi</h3><button class="mx static" id="drawerClose" aria-label="Tutup">✕</button></div>
+  <div id="notifList"></div>
+</aside>
+
+<div class="toasts" id="toasts"></div>
+<script src="app.js"></script>
+</body>
+</html>
